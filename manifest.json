@@ -1,0 +1,22 @@
+{
+    "name": "teste",
+    "description": "teste",
+    "version": "0.0.0",
+    "manifest_version": 3,
+    "permissions": [
+        "activeTab",
+        "downloads"
+    ],  
+    "background": {
+        "service_worker": "background.js"
+      },
+    "content_scripts": [
+        {
+            "matches": ["http://*/*", "https://*/*"],
+            "js": ["content.js"]
+        }
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    }
+}
